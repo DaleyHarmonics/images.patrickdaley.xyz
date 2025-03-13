@@ -1,0 +1,209 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    background: url('images/optimized_blueprint_image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Logo */
+.logo {
+    width: 80%;
+    max-width: 200px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-item {
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 5px 0;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background: rgba(200, 200, 200, 0.8);
+}
+
+.menu-item.active {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+}
+
+/* Content */
+.content {
+    flex-grow: 1;
+    margin-left: 15vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+}
+
+/* Page Content */
+.page-content {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 40px;
+    width: 90%;
+    max-width: 1100px;
+    min-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Media Grid */
+.media-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 95%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Image Styling */
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Page Filter Buttons */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 6px;
+}
+
+.filter-btn:hover {
+    background: rgba(200, 200, 200, 0.9);
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+}
+
+/* Top Menu (Mobile) */
+@media (max-width: 900px) {
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 110px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 5%;
+        background: rgba(255, 255, 255, 0.85);
+        z-index: 1000;
+    }
+
+    .logo {
+        width: 20%;
+        max-width: 75px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .menu-item {
+        padding: 15px 20px;
+        font-size: 1.1em;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 120px;
+        padding: 30px;
+    }
+}

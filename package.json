@@ -1,0 +1,13 @@
+{
+  "name": "images-patrickdaley",
+  "version": "1.0.0",
+  "description": "Media gallery for images.patrickdaley.xyz",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "Brian Patrick Daley",
+  "license": "MIT"
+}
